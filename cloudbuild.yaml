@@ -1,20 +1,4 @@
 steps:
-    - id: build docker image
-      name: "gcr.io/cloud-builders/docker"
-      args:
-          - build
-          - "-t"
-          - "eu.gcr.io/ysance-eatsupdata-1/EatsUpData2022:latest"
-          - "-f"
-          - admin_jobs/Dockerfile
-          - "."
-
-    - id: push docker image
-      name: "gcr.io/cloud-builders/docker"
-      args:
-          - push
-          - "eu.gcr.io/rni-sknow-gbl-ww-$_ENV/sknow-gcr-adminjobs-eu-$_ENV"
-
     - id: terraform init
       name: "terraform"
       entrypoint: "sh"
