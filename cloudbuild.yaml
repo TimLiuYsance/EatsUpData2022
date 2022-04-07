@@ -1,0 +1,18 @@
+steps:
+    - id: terraform init
+      name: "terraform"
+      entrypoint: "sh"
+      args:
+          - "-c"
+          - |
+              cd terraform/
+              terraform init
+
+    - id: terraform apply
+      name: "terraform"
+      entrypoint: "sh"
+      args:
+          - "-c"
+          - |
+              cd terraform/
+              terraform apply -auto-approve -var-file=variables_$_ENV.tfvars -lock=false
