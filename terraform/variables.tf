@@ -35,7 +35,7 @@ variable "jobName" {
 
 variable "serviceAccountEmail" {
   type        = string
-  default     = "ysance-eatsupdata-1-servic-189@ysance-eatsupdata-1.iam.gserviceaccount.com"
+  default     = "ysance-eatupdata-1-sa@ysance-eatsupdata-1.iam.gserviceaccount.com"
 }
 
 variable "jobFilePath" {
