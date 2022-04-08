@@ -15,6 +15,8 @@ resource "google_dataproc_workflow_template" "template-geosante" {
     step_id = var.jobName
     pyspark_job {
       main_python_file_uri = "gs://${var.bucketName}/${var.jobFileNameGCS}"
+      args = ["--bucketName=${var.bucketName}", "--folders=${var.foldersData}"]
     }
   }
 }
+

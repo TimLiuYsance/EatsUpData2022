@@ -35,20 +35,25 @@ variable "jobName" {
 
 variable "serviceAccountEmail" {
   type        = string
-  default     = "ysance-eatsupdata-1-service-ac@ysance-eatsupdata-1.iam.gserviceaccount.com"
+  default     = "ysance-eatsupdata-1-servic-189@ysance-eatsupdata-1.iam.gserviceaccount.com"
 }
 
 variable "jobFilePath" {
   type        = string
-  default     = "../src/jobs/job_test.py"
+  default     = "../src/jobs/job.py"
 }
 
 variable "bucketName" {
   type        = string
-  default     = "ysance-eatsupdata-1-test_bucket"
+  default     = "ysance-eatsupdata-1-data"
 }
 
 variable "jobFileNameGCS" {
   type        = string
   default     = "job.py"
+}
+
+variable "foldersData" {
+  type        = string
+  default     = "air_pollution,beer_consumption,cancer,smoke_tobacco_daily,wine_consumption"
 }
