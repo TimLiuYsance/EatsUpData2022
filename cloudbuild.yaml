@@ -1,6 +1,6 @@
 steps:
     - id: terraform init
-      name: "terraform"
+      name: "hashicorp/terraform:$_TF_VERSION"
       entrypoint: "sh"
       args:
           - "-c"
@@ -9,7 +9,7 @@ steps:
               terraform init -backend-config="bucket=ysance-eatsupdata-1-gcs-terraform-backend-eu-dv" -backend-config="prefix=ysance-eatsupdata-1"
 
     - id: terraform apply
-      name: "terraform"
+      name: "hashicorp/terraform:$_TF_VERSION"
       entrypoint: "sh"
       args:
           - "-c"
